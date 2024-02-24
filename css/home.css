@@ -1,0 +1,170 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#view1 {
+    height: 100vh;
+    background-color: skyblue;
+    overflow: hidden;
+    display: show; /* change to hidden */
+}
+
+.header-view1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    font-size: 32px;
+}
+
+.slideInLeftHeader {
+    animation-name: slideInLeftHeader;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    z-index: 10;
+}
+
+.h1-view1{
+    padding-left: 93px;
+    margin-bottom: 100px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.bee {
+    height: 100px;
+    animation-name: finishBeeSlide;
+    animation-duration: 2s;
+    animation-delay: 2s; /* Length of first animation */
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    z-index: 10;
+}
+
+
+.bee_flipped {
+    height: 100px;
+}
+
+.tree, .tree2{
+    height: 200px;
+    z-index: 1;
+    position: absolute;
+    
+}
+
+.clouds {
+    height: 200px;
+    transform: translate(-100%, -200%);
+    z-index: 1;
+}
+
+.clouds2 {
+    height: 200px;
+    transform: translate(100%, -200%);
+    z-index: 1;
+}
+
+.tree{
+    transform: translate(-200%, 50%);
+}
+
+.tree2{
+    transform: translate(100%, 50%);
+}
+
+.start-instruct{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.start, .instructions{
+    cursor: pointer;
+    width: 250px;
+    height: 125px;
+    background-color: brown;
+    border-radius: 40px;
+    text-align: center;
+
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 125px;
+    vertical-align: middle; /* Not needed */
+
+    border-color: yellow;
+    border-style: solid;
+    box-shadow: 5px 5px 5px black;
+
+    margin-bottom: 30px;
+
+}
+
+.grass{
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background-color: green;
+}
+
+/* Animations */
+
+  .start {
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-name: grow_shrink;
+    animation-iteration-count: infinite;
+} 
+
+ .instructions{
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-name: shrink_grow;
+    animation-iteration-count: infinite;
+}  
+
+@keyframes grow_shrink {
+    0%, 100% {
+        transform: scale(1.0);
+    }
+
+    50% {
+        transform: scale(1.1)
+    }
+}
+
+@keyframes shrink_grow {
+    0%, 100% {
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(1.0)
+    }
+}
+
+@keyframes slideInLeftHeader {
+    from{
+        transform: translateX(-900px);
+    }
+
+    to{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes finishBeeSlide {
+    from {
+        transform: translateX(0px)
+    }
+
+    to {
+        transform: translateX(900px)
+    }
+}

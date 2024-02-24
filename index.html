@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/game.css">
+    
+    <script defer src="js/home_page.js"></script>
+    <script type="module" src="js/retrieve_word.js"></script>
+    <script type="module" src="js/text_to_speech.js"></script>
+    <script type="module" src="js/play_game.js"></script>
+
+    <title>Spelling Bee</title>
+</head>
+
+<body>
+    <section id="view1"> <!-- currently display: none -->
+
+        <header class=" header-view1 slideInLeftHeader">
+            <h1 class="h1-view1">Spelling Bee Game</h1> <!-- bigger font -->
+            <img class="bee" src="images/bee.png" alt="">
+        </header>
+
+        <!-- <img class="bee_flipped" src="bee_flipped.png" alt=""> --> <!-- Not in currently for some reason -->
+        <section class="start-instruct">
+            <div id="start" class="start"> Start</div>
+            <div data-modal-target="#modal" class="instructions">Instructions</div>
+            <div class="modal" id="modal">
+                <div class="modal-header">
+                    <div class="title">Example Modal</div>
+                    <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body">
+                    There are 10 levels, each with one word. You get one try to guess the word.
+                    The correct answer moves you on to the next round. The wrong answer
+                    ends the game. (Power ups along the way??)
+                </div>
+            </div>
+            <div class="" id="overlay" ></div>
+            <img class ="tree" src="images/tree.png" alt="">
+            <img class="tree2" src="images/tree2.png" alt="">
+            <img class="clouds" src="images/clouds.png" alt="">
+            <img class="clouds2" src="images/clouds.png" alt="">
+            <div class="grass"></div>
+        </section>
+
+    </section>
+
+    <section id="view2">
+
+        <header class="view2-header">
+            <h1 class="view2-h1">Word One</h1>
+        </header>
+        <section class="response">
+            <input id="player-input" class="input" type="text" placeholder="Response">
+            <button id="player-submit" class="submit">Submit</button>
+        </section>
+
+        <section class="noise">
+            <select></select>
+            <img class="sound" id="sound" src="images/sound.png">
+        </section>
+
+<!--         <section class="power-ups">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </section> -->
+
+    </section>
+
+</body>
